@@ -52,7 +52,7 @@ jobs:
         id: semver
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: |
             Current version: ${{ steps.last.outputs.version || '0.0.0' }}
             Examine all changes in ${{ steps.last.outputs.base }}..HEAD using git log and git diff.
